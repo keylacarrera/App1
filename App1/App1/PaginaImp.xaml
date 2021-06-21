@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GeneradorRFC.PaginaImp">
+    <ContentPage.Content>
+        <StackLayout>
+            <?SE CREAN ENTRADAS PARA RECIBIR LOS DATOS SOLICITADOS AL USUARIO, SUELDO Y GASTOS MENSUALES?>
+            <Label Text="Ingrese los datos siguientes:" FontSize="28" TextColor="SteelBlue" HorizontalOptions="Center" Margin="15,15,15,15"/>
+            
+            <Entry x:Name="txtSueldo" Placeholder="SUELDO MENSUAL" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+
+            <Entry x:Name="txtGasto" Placeholder="GASTO MENSUAL" VerticalOptions="Center" HorizontalOptions="FillAndExpand"></Entry>
+
+            <?SE CREA BOTON ACEPTAR EL CUAL GENERA UN EVENTO QUE ES EL DE CALCULAR EL IMPUESTO?>
+            <Button x:Name="btnImp" Text="ACEPTAR" TextColor="White"  BorderColor="White" BackgroundColor="MediumSlateBlue" 
+                HorizontalOptions="Center" Margin="12,12,12,12" Clicked="ImpuestoMensual_Clicked"/>
+            <?EN UN LABEL SE MUESTRA LA CANTIDAD EN SU PROPIEDAD TEXT ?>
+            <Label Text="IMPUESTO A PAGAR:" FontSize="30" HorizontalOptions="Center" TextColor="DeepSkyBlue"/>
+            <Label x:Name="lblCantidad"  Text="$" FontSize="22" HorizontalOptions="Center" />
+
+            <?BOTON PARA LIMPIAR LA ENTRADAS?>
+            <Button x:Name="btnLimpiar" Text="LIMPIAR" TextColor="White"  BorderColor="White" BackgroundColor="SkyBlue"
+                HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="20,20,20,20" Clicked="btnLimpiar_Clicked"/>
+
+            <?BOTON PARA SALIR DE LA PAGINA Y REGRESAR A LA PAGINA PRINCIPAL?>
+            <Button x:Name="btnAtras" Text="ATRÁS" TextColor="White"  BorderColor="White" BackgroundColor="SkyBlue"
+                HorizontalOptions="End" VerticalOptions="EndAndExpand" Margin="20,20,20,20" Clicked="btnAtras_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.PaginaCURP">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <?SE CREAN ENTRADAS PARA RECIBIR LOS DATOS SOLICITADOS AL USUARIO?>
+            <Label Text="Ingrese los datos siguientes:" FontSize="28" TextColor="SteelBlue" HorizontalOptions="Center" Margin="15,15,15,15"/>
+
+            <Entry x:Name="txtNombre"  Placeholder="NOMBRE"></Entry>
+
+            <Entry x:Name="txtPapellido"  Placeholder="APELLIDO PATERNO"></Entry>
+
+            <Entry x:Name="txtMapellido"  Placeholder="APELLIDO MATERNO"></Entry>
+
+            <Entry x:Name="txtFecha" Placeholder="00/00/0000" ></Entry>
+
+            <Entry x:Name="txtSexo"  Placeholder="SEXO Ejemplo: M"></Entry>
+
+            <Entry x:Name="txtEntFed"  Placeholder="ENTIDAD FEDERATIVA"></Entry>
+
+            <?SE CREAN BOTON ACEPTAR QUE GENERA UN EVENTO EL CUAL GENERA EL RFC?>
+            <Button x:Name="btnCURP" Text="ACEPTAR" TextColor="White"  BorderColor="White" BackgroundColor="MediumSlateBlue" 
+                HorizontalOptions="Center" Margin="12,12,12,12" Clicked="btnCURP_Clicked"/>
+            <?SE MJUESTRA EL RFC GENERADO EN UN LABEL?>
+            <Label Text="CURP GENERADO" FontSize="30" HorizontalOptions="Center" TextColor="DeepSkyBlue"/>
+            <Label x:Name="lblMuestraCURP"   Text="" FontSize="22" HorizontalOptions="Center" />
+
+            <?BOTON PARA LIMPIAR LA ENTRADAS?>
+            <Button x:Name="btnLimpiar" Text="LIMPIAR" TextColor="White"  BorderColor="White" BackgroundColor="SkyBlue"
+                HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="20,20,20,20" Clicked="btnLimpiar_Clicked"/>
+
+            <?BOTON PARA SALIR DE LA PAGINA Y REGRESAR A LA PAGINA PRINCIPAL?>
+            <Button x:Name="btnAtras" Text="ATRÁS" TextColor="White"  BorderColor="White" BackgroundColor="SkyBlue"
+                HorizontalOptions="End" VerticalOptions="EndAndExpand" Margin="20,20,20,20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

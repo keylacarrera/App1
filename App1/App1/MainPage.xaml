@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.MainPage">
+
+    <StackLayout Orientation="Vertical" >
+        <?MENSAJE DE BIENVENIDA?>
+        <Label Text="BIENVENIDO" FontSize="35" HorizontalOptions="Center" TextColor="SteelBlue"/>
+        <Label Text="¿QUE DESEA REALIZAR?" FontSize="30" HorizontalOptions="Center" TextColor="SteelBlue"/>
+
+        <?SE CREAN BOTONES CON SUS RESPECTIVAS PROPIEDADES QUE NOS LLEVAN A UNA PAGINA DIFERENTE, UNA PARA GENERAR EL RFC Y OTRA PARA CALCULAR EL IMPUESTO?>
+        <Button x:Name="btnRFC" Text="GENERAR RFC" TextColor="White"  BorderColor="White" BackgroundColor="DarkGreen" 
+                HorizontalOptions="Center" Margin="25,50,25,25" MinimumHeightRequest="30" Clicked="btnRFC_Clicked"/>
+
+        <Button x:Name="btnImp" Text="IMPUESTO MENSUAL" TextColor="White"  BorderColor="White" BackgroundColor="CadetBlue" 
+                HorizontalOptions="Center" Margin="25,25,25,25" Clicked="btnImp_Clicked"/>
+
+        <Button x:Name="btnCurp" Text="CURP" TextColor="White"  BorderColor="White" BackgroundColor="SteelBlue" 
+                HorizontalOptions="Center" Margin="25,25,25,25" Clicked="btnCurp_Clicked"/>
+        
+        <?BOTON PARA CERRAR APLICACION?>
+        <Button x:Name="Salir" Text="SALIR" TextColor="White"  BorderColor="White" BackgroundColor="SkyBlue" 
+                HorizontalOptions="Center" VerticalOptions="EndAndExpand" Margin="20,20,20,20" Clicked="Salir_Clicked" />
+
+    </StackLayout>
+
+</ContentPage>
